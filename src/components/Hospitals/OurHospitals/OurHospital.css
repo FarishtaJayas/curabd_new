@@ -1,0 +1,130 @@
+.ourHospitals {
+	background: #ffffff;
+	color: #3d1a6f;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.largeMap {
+	width: 80vw;
+	height: 80vh;
+}
+
+.map_container {
+	position: relative;
+}
+
+
+.map_container .iFrameContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+}
+
+.none {
+	opacity: 0;
+}
+
+.ourHospitals svg {
+	color: white;
+}
+
+.ourHospitals h3 {
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+.ourHospitals h4 {
+
+	font-weight: 400;
+	font-size: 1.875rem;
+
+}
+
+.mapContainerLock {
+	pointer-events: none;
+}
+
+
+.mapContainer {
+	position: absolute;
+	overflow: hidden;
+}
+
+
+.content {
+	width: 800px;
+	height: 600px;
+	margin: 30px 200px 0 0;
+
+}
+
+
+.search_icon {
+	height: 30px;
+	width: 30px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	color: white;
+	text-decoration: none;
+}
+
+
+
+
+.finder {
+	border: 1px solid #fff;
+	background-color: #f6f5f0;
+	border-radius: 15px;
+	padding: 8px;
+	box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6),
+		-9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+.finder__outer {
+	display: flex;
+	width: 100%;
+	padding: .5rem 1rem;
+	border-radius: 10px;
+	box-shadow: inset 10px 10px 15px -10px #c3c3c3,
+		inset -10px -10px 15px -10px #ffffff;
+}
+
+.finder__inner {
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex: 1;
+}
+
+.finder__form {
+	flex: 1;
+	height: calc(100% + 3rem);
+}
+
+.finder__input {
+	height: calc(100% + 3rem);
+	border: none;
+	background-color: transparent;
+	outline: none;
+	font-size: 1.5rem;
+	letter-spacing: 0.75px;
+}
+
+
+
+@media (max-width: 701px) {
+	.ourHospitals {
+		height: 100vh;
+	}
+
+	.map_container .iFrameContainer {
+		height: 100vh;
+	}
+}

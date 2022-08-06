@@ -1,0 +1,21 @@
+.HospitalMapGostDiv {
+    height: 100vh;
+    position: absolute;
+    top: 55rem;
+}
+
+
+@media (max-width: 1650px) {
+
+
+    .HospitalMapGostDiv {
+
+        top: 44rem !important;
+    }
+
+    .SelectHotelsOrHospital {
+        height: 100% !important;
+        margin: 3rem 0 3rem;
+    }
+
+}

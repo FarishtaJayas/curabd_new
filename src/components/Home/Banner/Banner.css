@@ -1,0 +1,222 @@
+.banner {
+    position: relative;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: #ffffff;
+
+
+}
+
+.banner h3 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.banner h4 {
+    font-weight: 400;
+    font-size: 1.875rem;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-banner {
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.side_image {
+    /* width: 100px;
+  height: 100px;
+  background: red; */
+    position: relative;
+    animation: mymove 5s infinite;
+    text-align: center;
+}
+
+.side_image img {
+    width: 70%;
+}
+
+@keyframes mymove {
+    from {
+        bottom: 0px;
+    }
+
+    to {
+        bottom: 100px;
+    }
+}
+
+.CustomSlider button {
+    display: none;
+}
+
+.CustomSlider a {
+    display: none;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    .inner-banner {
+        height: 100%;
+    }
+
+    .inner-banner .mt-5 {
+        margin-top: 7rem !important;
+    }
+
+    .DepartmentSpinner {
+        width: 350px !important;
+    }
+
+    .spinnerSVG {
+        width: 23rem !important;
+
+    }
+
+    .SelectHotelsOrHospital {
+        height: 100% !important;
+
+    }
+
+    .spinner {
+        height: 58.4vh !important;
+        justify-content: flex-end;
+    }
+
+    .banner h3 {
+        font-weight: 700;
+        font-size: 3rem;
+    }
+
+    .banner h4 {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .navBlue a {
+
+        padding: 0rem !important;
+    }
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
+
+/*Shrinking for mobile*/
+@media (max-width: 1450px) {
+
+    .spinnerSVG {
+        width: 25rem !important;
+
+    }
+
+}
+
+
+
+/*Shrinking for mobile*/
+@media (max-width: 1650px) {
+
+    .GostDiv {
+        top: 26rem !important;
+
+    }
+
+
+}

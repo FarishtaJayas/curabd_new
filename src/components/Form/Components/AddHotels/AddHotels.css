@@ -1,0 +1,104 @@
+.section {
+
+    background-color: rgb(225, 225, 225);
+}
+
+
+
+
+
+.booking-form {
+    max-width: 642px;
+    width: 100%;
+    margin: auto;
+}
+
+.booking-form .form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.booking-form .form-header h1 {
+    font-size: 58px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #3d1a6f;
+    margin: 0px;
+}
+
+.booking-form .form-header h3 {
+
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #3d1a6f;
+    margin: 0px;
+}
+
+.booking-form>form {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 3px;
+    border-radius: 15px;
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.booking-form .form-control {
+    background-color: #ededed;
+    border: none;
+    height: 45px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    color: #101113;
+}
+
+
+
+.booking-form .form-label {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.booking-form .submit-btn {
+    color: #ffffff;
+    background-color: rgb(165, 79, 252);
+    font-weight: 700;
+    height: 50px;
+    border: none;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.booking-form img {
+    width: 100px;
+    background-color: #ededed;
+}
+
+.hospital_container {
+    background: rgb(234, 213, 255);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px
+}
+
+
+
+
+.custom-file__input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}

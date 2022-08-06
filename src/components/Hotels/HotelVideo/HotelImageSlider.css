@@ -1,0 +1,8 @@
+.HotelSliderImage {
+
+    height: 80vh;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+}

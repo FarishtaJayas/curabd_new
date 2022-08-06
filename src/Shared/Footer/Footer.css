@@ -1,0 +1,45 @@
+.footer {
+    position: relative;
+    z-index: 100;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: #fff;
+    /* border-radius: 35% 0 0 0; */
+}
+
+.footer svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.subscriber {
+    position: relative;
+}
+
+.subscriber input {
+    background-color: transparent;
+    padding-right: 40px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.subscriber input::placeholder {
+    color: #fff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.subscriber .right_arrow {
+    position: absolute;
+    right: 5px;
+
+    fill: #000;
+    width: 40px;
+    height: 40px;
+}
+
+.footer i {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}

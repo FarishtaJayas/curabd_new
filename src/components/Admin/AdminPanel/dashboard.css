@@ -1,0 +1,159 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+.bg-color {
+    background-color: #504B6B;
+}
+
+.text-color {
+    text-decoration: none !important;
+    color: white;
+    transition: 0.1s;
+}
+
+.text-color:hover {
+    color: #fed900;
+}
+
+.icon-color {
+    color: #fed900;
+}
+
+.heading {
+    color: #4B4B4B;
+    padding: 0.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Vertical Table */
+#table-v {
+    border: 0;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.tr-v {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: .35em;
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+    border-radius: 1rem;
+}
+
+.td-v {
+    padding: .625em;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+}
+
+.td-v:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.td-v:last-child {
+    border-bottom: 0;
+}
+
+/* Horizontal Table */
+
+.table-hr {
+    border: 1px solid #ccc;
+    border-collapse: separate;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.tr-hr {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: .35em;
+    border-radius: 1rem;
+}
+
+.th-hr,
+.td-hr {
+    padding: .625em;
+    text-align: center;
+}
+
+.htl-name{
+    text-align: left !important;
+}
+
+.td-hr {
+    font-size: .85em;
+    letter-spacing: .1em;
+    /* text-transform: uppercase; */
+}
+
+@media screen and (max-width: 600px) {
+
+    .table-hr {
+        border: 0;
+    }
+
+    .thead-hr {
+        display: none;
+    }
+
+    .tr-hr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+        border-radius: 1rem;
+    }
+
+    .td-hr {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    .htl-name{
+        text-align: right !important;
+    }
+
+    .td-hr:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .td-hr:last-child {
+        border-bottom: 0;
+    }
+}
+
+.add-icon{
+    font-size: 1.5rem;
+    color: #3d1a6f;
+    padding: 0rem .5rem 1rem .5rem;
+    display: block;
+    float: left;
+}
+.add-hotels{
+    color: #4B4B4B;
+    font-weight: 700;
+    text-decoration: none;
+}
+.form-width{
+    min-width: 15rem;
+    max-width: 28rem;
+    width: 75%;
+    margin: auto;
+}

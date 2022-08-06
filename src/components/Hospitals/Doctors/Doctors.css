@@ -1,0 +1,63 @@
+.doctors {
+    background: transparent;
+}
+
+.doctors h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: white;
+}
+
+.doctors h4 {
+
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.doctors p {
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.custom-card-img-top {
+    border-radius: 500000px;
+}
+
+.doctors .card p {
+    color: gray;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #555555;
+}
+
+.doctors .card h5 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.doctors .card {
+    background: #78D2CF;
+    border-radius: 20px;
+}
+
+.doctors .card-body {
+    background: #ffff;
+    border-radius: 0 0 20px 20px;
+}
+
+.doctorHover:hover {
+    border-radius: 30px;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.doctorHover img {
+    height: 300px;
+}

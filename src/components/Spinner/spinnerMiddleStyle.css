@@ -1,0 +1,26 @@
+.spinner-middle-cont{
+  position: relative;
+  height: 18.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .spinner-middle-cont{
+    height: 10rem;
+  }
+}
+
+#prev_btn2 {
+  float: left
+}
+
+#next_btn2 {
+  float: right
+}
+
+#middle_{
+  background-color: #f4bae1;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
+  border: 50%;
+}

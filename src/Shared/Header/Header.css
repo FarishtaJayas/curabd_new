@@ -1,0 +1,10 @@
+.navBlue {
+    background-color: #3d1a6f !important;
+    color: goldenrod !important;
+}
+
+.navBlue a {
+    text-decoration: none;
+    color: #f6d001 !important;
+    padding: 0.5rem;
+}
