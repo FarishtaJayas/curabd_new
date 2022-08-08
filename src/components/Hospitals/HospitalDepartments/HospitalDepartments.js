@@ -4,7 +4,7 @@ import departmentsImage from './../../../assets/Images/HospitalDepartmentImage.p
 import Doctors from '../Doctors/Doctors';
 import SpinnerMiddle from '../../Spinner/spinnerMiddle';
 
-const HospitalDepartments = ({ hospitalData, myRef}) => {
+const HospitalDepartments = ({ hospitalData, myRef }) => {
 
     let [selectedDepartment, setSelectedDepartment] = useState('');
     let [bgColor, setBgColor] = useState('`#a5a6f6');
@@ -25,8 +25,8 @@ const HospitalDepartments = ({ hospitalData, myRef}) => {
     }
 
     return (
-        <div className={!selectedDepartment ? "departments" : "doctors"} style={{background: bgColor}}>
-            <div ref={myRef}>
+        <div ref={myRef} className={!selectedDepartment ? "departments" : "doctors"} style={{ background: bgColor }}>
+            <div>
                 {
 
                     !selectedDepartment ?
@@ -44,7 +44,7 @@ const HospitalDepartments = ({ hospitalData, myRef}) => {
 
                                 <div className="align-items-center mt-5">
                                     <div className='m-5'>
-                                        <img data-aos="fade-down-left" className='img-fluid' src={departmentsImage} alt="" />
+                                        <img className='img-fluid img-cont' src={departmentsImage} alt="" />
                                     </div>
                                 </div>
 
@@ -53,9 +53,9 @@ const HospitalDepartments = ({ hospitalData, myRef}) => {
                         :
 
                         <div className='container'>
-                            <Doctors doctorsData={doctorsData}/>
+                            <Doctors doctorsData={doctorsData} />
                         </div>
-                        
+
                 }
 
 

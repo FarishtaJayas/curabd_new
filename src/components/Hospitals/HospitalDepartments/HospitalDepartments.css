@@ -7,6 +7,9 @@
 
 }
 
+.img-cont{
+    opacity: 0;
+}
 
 .doctors{
     overflow: hidden;

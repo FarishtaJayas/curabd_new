@@ -57,18 +57,19 @@ const Doctors = ({ doctorsData}) => {
                         {
                             doctorsData?.length ? <>
                                 {doctorsData?.slice(0, 5).map((doctor) => (
-                                    <a href="https://p5jfzp15q2p.typeform.com/to/iAHQysg7" target="_blank" style={{ textDecoration: "none", color: "currentColor" }}>
+                                    <a className='card-cont' href="https://p5jfzp15q2p.typeform.com/to/iAHQysg7" target="_blank" style={{ textDecoration: "none", color: "currentColor" }}>
 
                                         <div key={doctor?.id} className="col h-100" data-aos="zoom-out-down">
                                             <div className="card doctorHover h-100">
                                                 <img src={doctor?.doctorImage} className="card-img-top  img-fluid m-auto w-100 m-auto" alt="..." />
-                                                <div className="card-body px-5 ">
+                                                <div className="card-body px-2 text-center">
                                                     <h5 className="card-title">{doctor?.doctorName}</h5>
                                                     <p className="card-text">{doctor?.department}</p>
                                                     {/* <p className="card-text">{doctor?.qualification}</p> */}
                                                 </div>
                                             </div>
                                         </div>
+
                                     </a>
                                 ))}
 

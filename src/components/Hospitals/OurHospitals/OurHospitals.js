@@ -30,7 +30,10 @@ const OurHospitals = () => {
 
     useEffect(
         () => {
-            if (allPagesVisibility) myRef.current.scrollIntoView({ behavior: 'smooth' });
+            if (allPagesVisibility) {
+                var screenh = window.innerHeight;
+                window.scrollBy(0, screenh + 800);
+            }
             if (document.length !== 0) {
                 setData(document);
             };
