@@ -4,7 +4,7 @@ import './Rooms.css'
 
 
 
-const Rooms = ({ roomData, HotelData }) => {
+const Rooms = ({ roomData, HotelData, bg_color }) => {
 
     const roomName = (roomData[0]?.name);
     const HotelName = (HotelData?.name);
@@ -54,62 +54,60 @@ const Rooms = ({ roomData, HotelData }) => {
     ]
 
     return (
-        <div className="rooms">
+        <div className="rooms" style={{ backgroundColor: bg_color }}>
             <>
 
-                <div className="col-12 pt-5">
-
-                    <div class="py-5">
-                        <div class="container">
-                            <div class="col-md-12 d-flex p-2  justify-content-center p-0">
-                                {/* <div className='bookRoom p-2 text-center m-3'>
+                <div className="col-12">
+                    <div class="container BookingContainer">
+                        <div class="col-md-12 d-flex p-2  justify-content-center p-0">
+                            {/* <div className='bookRoom p-2 text-center m-3'>
                                     <h6>{HotelName}</h6>
                                 </div> */}
-                                <div className='p-3 px-5 bookRoom'>
-                                    <h2>Book Your Room</h2>
-                                </div>
-                                {/* <div className='bookRoom p-2 text-center  m-3'>
+                            <div className='p-3 px-5 bookRoom'>
+                                <h2>Book Your Room</h2>
+                            </div>
+                            {/* <div className='bookRoom p-2 text-center  m-3'>
 
                                     <h6>{roomName}</h6>
                                 </div> */}
-                            </div>
-                            <div class="hotel_booking_table d-flex p-5  justify-content-center">
+                        </div>
+                        <div class="hotel_booking_table d-flex p-5  justify-content-center">
 
-                                <div class="row align-items-center">
+                            <div class="row align-items-center">
 
-                                    <div className="col-12 col-md-4">
-                                        <div className=' m-2 text-center'>
-                                            <h3>{HotelName}</h3>
-                                        </div>
-
-                                        <div className=' m-2 text-center'>
-                                            <h5>{roomName}</h5>
-                                        </div>
+                                <div className="col-12 col-md-4">
+                                    <div className=' m-2 text-center'>
+                                        <h3>{HotelName}</h3>
                                     </div>
 
-                                    <div className="col-md-8 col-12">
-                                        <div className="row">
-                                            <div className="col-12 col-md-3">
-                                                <div className=' text-center'>
-                                                    <label>Check In date</label>
-                                                    <input onChange={e => setBookData({ ...bookData, checkInDate: e.target.value })} type='date' class="form-control py-4" placeholder="Arrival Date" />
-                                                </div>
+                                    <div className=' m-2 text-center'>
+                                        <h5>{roomName}</h5>
+                                    </div>
+                                </div>
+
+                                <div className="col-md-8 col-12">
+                                    <div className="row">
+                                        <div className="col-12 col-md-3">
+                                            <div className=' text-center'>
+                                                <label>Check In date</label>
+                                                <input onChange={e => setBookData({ ...bookData, checkInDate: e.target.value })} type='date' class="form-control py-4" placeholder="Arrival Date" />
                                             </div>
-                                            <div className="col-12 col-md-3">
-                                                <div className=' text-center'>
-                                                    <label>Check out date</label>
-                                                    <input onChange={e => setBookData({ ...bookData, checkOutDate: e.target.value })} type='date' class="form-control  py-4" placeholder="Arrival Date" />
-
-                                                </div>
+                                        </div>
+                                        <div className="col-12 col-md-3">
+                                            <div className=' text-center'>
+                                                <label>Check out date</label>
+                                                <input onChange={e => setBookData({ ...bookData, checkOutDate: e.target.value })} type='date' class="form-control  py-4" placeholder="Arrival Date" />
 
                                             </div>
 
+                                        </div>
 
-                                            <div className="col-12 col-md-3">
 
-                                                <div class="text-center ">
-                                                    <label htmlFor="">Number of Adult</label>
-                                                    {/* <select onChange={e => setBookData({ ...bookData, numOfAdult: e.target.value })} class="w-100 p-3 py-4">
+                                        <div className="col-12 col-md-3">
+
+                                            <div class="text-center ">
+                                                <label htmlFor="">Number of Adult</label>
+                                                {/* <select onChange={e => setBookData({ ...bookData, numOfAdult: e.target.value })} class="w-100 p-3 py-4">
                                                         <option data-display="Adult">Adult</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -117,15 +115,15 @@ const Rooms = ({ roomData, HotelData }) => {
                                                         <option value="4">4</option>
                                                     </select> */}
 
-                                                    <input onChange={e => setBookData({ ...bookData, numOfAdult: e.target.value })} type='number' min="0" class="form-control  py-4" placeholder="Number of Adult" />
-                                                </div>
+                                                <input onChange={e => setBookData({ ...bookData, numOfAdult: e.target.value })} type='number' min="0" class="form-control  py-4" placeholder="Number of Adult" />
                                             </div>
+                                        </div>
 
 
-                                            <div className="col-12 col-md-3">
-                                                <div class=" text-center">
-                                                    <label htmlFor="">Number of Child</label>
-                                                    {/* <select onChange={e => setBookData({ ...bookData, numOfChild: e.target.value })} class="w-100  p-3 py-4">
+                                        <div className="col-12 col-md-3">
+                                            <div class=" text-center">
+                                                <label htmlFor="">Number of Child</label>
+                                                {/* <select onChange={e => setBookData({ ...bookData, numOfChild: e.target.value })} class="w-100  p-3 py-4">
                                                         <option data-display="Child">Child</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -134,25 +132,24 @@ const Rooms = ({ roomData, HotelData }) => {
                                                     </select> */}
 
 
-                                                    <input onChange={e => setBookData({ ...bookData, numOfChild: e.target.value })} type='number' min="0" class="form-control py-4" placeholder="Number of Child" />
-                                                </div>
-
+                                                <input onChange={e => setBookData({ ...bookData, numOfChild: e.target.value })} type='number' min="0" class="form-control py-4" placeholder="Number of Child" />
                                             </div>
 
                                         </div>
+
                                     </div>
-
-
-
                                 </div>
-                            </div>
-                            <div className='col-12 col-md-12 d-flex  justify-content-center'>
-                                <button data-bs-toggle="modal"
-                                    data-bs-target="#EditModal"
-                                    className=" bookingSubmitButton btn btn-danger p-3 m-2">Book Now</button>
-                            </div>
 
+
+
+                            </div>
                         </div>
+                        <div className='col-12 col-md-12 d-flex  justify-content-center'>
+                            <button data-bs-toggle="modal"
+                                data-bs-target="#EditModal"
+                                className=" bookingSubmitButton btn btn-danger p-3 m-2">Book Now</button>
+                        </div>
+
                     </div>
                 </div>
 

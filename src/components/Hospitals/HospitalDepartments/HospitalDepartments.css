@@ -1,18 +1,22 @@
 .departments {
+    position: relative;
     background: #F4BAE1;
-    display: flex;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
-
+    height: 110vh;
 }
 
-.img-cont{
-    opacity: 0;
+.container h1{
+    margin-top: 10rem;
+    color: #3d1a6f;
+    font-weight: 800;
+    font-size: 3rem;
 }
 
 .doctors{
     overflow: hidden;
+    height: 100vh;
+    position: relative;
 }
 
 .departments h3 {

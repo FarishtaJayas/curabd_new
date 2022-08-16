@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Rooms from '../Rooms/Rooms';
-import HotelDepartment from './../../../assets/Images/HotelsDepertmentImage.png';
+// import HotelDepartment from './../../../assets/Images/HotelsDepertmentImage.png';
 import SpinnerMiddle from '../../Spinner/spinnerMiddle';
 import './HotelDepartments.css';
 
-const HotelDepartments = ({ HotelData }) => {
+const HotelDepartments = ({ HotelData}) => {
 
+    let [bgColor, setBgColor] = useState('#f4bae1');
     let [selectedDepartment, setSelectedDepartment] = useState('');
     let allPackages = [];
 
@@ -14,49 +15,47 @@ const HotelDepartments = ({ HotelData }) => {
     }
 
     const roomData = HotelData?.packages?.filter(packages => packages?.name === selectedDepartment);
-    const handleSelectValue = (selectedDepartment) => {
+    const handleSelectValue = (selectedDepartment, bg_color) => {
         setSelectedDepartment(selectedDepartment);
+        setBgColor(bg_color);
+        // change button colors
+        // let btns = ReactDOM.findDOMNode(bgRef.current).getElementsByClassName('Hotel-Selection-Btn');
+        // btns = [].slice.call(btns);
+        // btns.forEach(
+        //     (btn) => {
+        //         btn.style.backgroundColor = bg_color;
+        //     }
+        // )
     }
 
 
-
-
     return (
-        <div className={!selectedDepartment ? "departments" : "doctors"}>
+        <div className={!selectedDepartment ? "departments" : "doctors hotelDiv"} style={{ backgroundColor: bgColor }}>
             <div>
                 {
 
                     !selectedDepartment ?
-                        <div className="container">
-                            < div className="row">
+                        <div className="container spinner-cont">
+                            <h1 className='text-center'>
+                                HOTEL DEPARTMENTS
+                            </h1>
 
-                                <div className="col-md-5 col-12 mt-5 departmentText">
-
-                                    <h3 data-aos="zoom-out-up">Departments</h3>
-                                    <h4 data-aos="zoom-out-right" className='mt-5'>Over 100 departments to choose from</h4>
-
-                                    <p data-aos="zoom-out-right">Cura Bangladesh is here at your rescue with the best concerns.We provide the best options for choosing hotels based on location and cost-effective desirability.Explore, select and book - all without the hassle of being confused.</p>
-                                </div>
-                                <div className="col-md-7  col-12 d-flex justify-content-end  align-items-center">
-                                    <div>
-                                        <img data-aos="fade-down-left" className='img-fluid' src={HotelDepartment} alt="" />
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         :
                         <Rooms
                             roomData={roomData}
                             HotelData={HotelData}
+                            bg_color={bgColor}
                         />
                 }
                 <>
 
-                    <div className='spinner-middle-cont'>
+                    <div className='spinner-middle-cont' style={{ backgroundColor: bgColor }}>
                         <SpinnerMiddle info={allPackages}
+                            UseCase="hotel"
                             handleClick={
-                                (data) => {
-                                    handleSelectValue(data);
+                                (data, bg_color) => {
+                                    handleSelectValue(data, bg_color);
                                 }
                             }
                         />

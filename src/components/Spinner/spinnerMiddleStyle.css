@@ -1,26 +1,84 @@
-.spinner-middle-cont{
-  position: relative;
-  height: 18.5rem;
+#menu_nav {
+  width: 38rem;
+  bottom: -22rem;
 }
 
-@media screen and (max-width: 700px) {
-  .spinner-middle-cont{
-    height: 10rem;
+@media screen and (max-width: 2000px) {
+  #menu_nav {
+    width: 38rem;
+    bottom: -22rem;
   }
 }
 
-#prev_btn2 {
-  float: left
+@media screen and (max-width: 1800px) {
+  #menu_nav {
+    width: 32rem;
+    bottom: -18rem;
+  }
 }
 
-#next_btn2 {
-  float: right
+@media screen and (max-width: 1500px) {
+  #menu_nav {
+    width: 32rem;
+    bottom: -18rem;
+  }
 }
 
-#middle_{
-  background-color: #f4bae1;
-  border-style: solid;
-  border-width: 1.5px;
-  border-color: black;
-  border: 50%;
+
+@media screen and (max-width: 1366px) {
+  #menu_nav {
+    width: 28rem;
+    bottom: -16rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #menu_nav {
+    width: 28rem;
+    bottom: -16rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #menu_nav {
+    width: 28rem;
+    bottom: -16rem;
+  }
+}
+
+
+@media screen and (max-width: 876px) {
+  #menu_nav {
+    width: 25rem;
+    bottom: -14rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu_nav {
+    width: 25rem;
+    bottom: -14rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #menu_nav {
+    width: 25rem;
+    ;
+    bottom: -14rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #menu_nav {
+    width: 23rem;
+    bottom: -13rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #menu_nav {
+    width: 18rem;
+    bottom: -10rem;
+  }
 }

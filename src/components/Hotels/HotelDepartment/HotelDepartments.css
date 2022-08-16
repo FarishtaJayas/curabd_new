@@ -1,3 +1,10 @@
 .departmentText {
     color: #3d1a6f;
 }
+.spinner-cont{
+    height: 78vh;
+}
+.hotelDiv{
+    height: unset !important;
+}
+

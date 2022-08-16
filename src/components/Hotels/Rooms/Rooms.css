@@ -1,11 +1,12 @@
-.rooms {
-    background: #A5A6F6;
-
-
-}
-
 .roomHover img {
     min-height: 250px;
+}
+
+.BookingContainer {
+    padding-top: 2rem;
+    margin-bottom: 18rem;
+    z-index: 100;
+    position: relative;
 }
 
 .rooms h3 {

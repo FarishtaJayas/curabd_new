@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,18 +14,28 @@ import "./HotelImageSlider.css";
 
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
-export default function HotelSlider({ HotelData }) {
+export default function HotelSlider({HotelData }) {
+
+    // Scroll to Swiper
+    let ref = useRef();
+    useEffect(
+        () => {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
+    );
 
     return (
 
-        <>
+        <div ref={ref}>
             <Swiper
+                initialSlide={1}
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
-                slidesPerView={"auto"}
+                slidesPerView={2}
+                spaceBetween={20}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3500,
                     disableOnInteraction: false,
                 }}
                 navigation={true}
@@ -33,10 +43,10 @@ export default function HotelSlider({ HotelData }) {
                     clickable: true,
                 }}
                 coverflowEffect={{
-                    rotate: 50,
+                    rotate: 0,
                     stretch: 0,
                     depth: 100,
-                    modifier: 1,
+                    modifier: 2,
                     slideShadows: true,
                 }}
 
@@ -81,6 +91,6 @@ export default function HotelSlider({ HotelData }) {
 
 
             </Swiper>
-        </>
+        </div>
     );
 }

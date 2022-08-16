@@ -23,6 +23,12 @@ class SpinnerCorner extends React.Component {
         this.props.handleClick();
     }
 
+    positioning = () => {
+        let spinner = document.getElementById('menu_nav1');
+        let del = parseInt(window.innerWidth) - parseInt(spinner.offsetWidth);
+        spinner.style.left = del / 2 + "px";
+    }
+
     componentDidMount() {
 
         var total = this.menus.length;
@@ -46,6 +52,10 @@ class SpinnerCorner extends React.Component {
                 this.isClicked();
             });
         }
+
+        // Positioning
+        this.positioning();
+        window.addEventListener("resize", this.positioning);
 
         document.querySelectorAll('ul.circle li a.over').forEach((e) => {
             updateCurvedText(e, 250);
@@ -227,7 +237,7 @@ class SpinnerCorner extends React.Component {
     render() {
         return (
             <div>
-                <nav className="menunav">
+                <nav className="menunav" id='menu_nav1'>
                     <ul className="circle">
 
                         <li className="coconut light slice">
@@ -256,7 +266,7 @@ class SpinnerCorner extends React.Component {
                         <li className="almond light slice"  >
                             {/* Menu labels */}
                             <label htmlFor="oalmond" className="circle over" id="m-4">
-                                <a className="over" id={3} href="javascript:void(0)" data-objs={JSON.stringify(this.props.info[3])}>4 </a>
+                                <a className="over" id={3} href="javascript:void(0)" data-objs={JSON.stringify(this.props.info[3])}>4</a>
                             </label>
                         </li>
 

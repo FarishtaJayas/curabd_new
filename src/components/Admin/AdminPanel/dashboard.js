@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
 
         <ProtectedRoute>
-            <div className="container-fluid pt-5">
+            <div className="container-fluid">
                 <div className="row flex-nowrap">
                     <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-color">
                         <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-5 text-white min-vh-100">

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="83.986656mm"
+   height="50mm"
+   viewBox="0 0 83.986656 50.000001"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-38.270481,-55.351911)">
+    <circle
+       style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       id="path338"
+       cx="-109.96665"
+       cy="-65.833931"
+       r="38.942188"
+       transform="rotate(-159.40876)" />
+    <text
+       xml:space="preserve"
+       id="text1745"
+       style="font-size:7.7611px;white-space:pre;fill:#2f0060;fill-opacity:1;stroke:#320769;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(0.85613257,-0.01558429,0.01558429,0.85613257,10.434435,11.524794)"><textPath
+         xlink:href="#path338"
+         id="textPath3251"
+         style="fill:#2f0060;fill-opacity:1;stroke:#320769;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1">Hotel Nearby The Hospital</textPath></text>
+  </g>
+</svg>

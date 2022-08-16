@@ -1,158 +1,108 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './OurHotels.css'
-// import { useCollection } from '../../../Hooks/useCollection';
-// import HotelDepartments from '../HotelDepartment/HotelDepartments';
-// import HotelMap from '../HotelMap/HotelMap';
-// import Footer from '../../../Shared/Footer/Footer';
-// import HotelMapGostDiv from '../HotelMap/HotelMapGostDiv/HotelMapGostDiv';
-// import HotelSlider from '../HotelVideo/HotelSlider';
-// import SpinnerCorner from '../../Spinner/spinnerCorner';
-import ScrollToTop from './../../ScrollToTop/ScrollToTop';
-import Typewriter from 'typewriter-effect';
+import { useCollection } from '../../../Hooks/useCollection';
+import SpinnerCorner from '../../Spinner/spinnerCorner';
+// import ScrollToTop from './../../ScrollToTop/ScrollToTop';
+import NearestHotels from './../NearestHotels/NearestHotels';
 
 const OurHotels = () => {
-    // let [selectedHotel, setSelectedHotel] = useState('')
 
-    // const { document } = useCollection('Hotels');
-    // let [mydata, setData] = useState(document);
+    const { document } = useCollection('Hospitals');
 
-    // // Code Here Rafi
-    // let [visibility, setVisibility] = useState(false);
-    // const handleSelectValue = (selectedHotel) => {
-    //     setVisibility(!visibility);
-    //     setSelectedHotel(selectedHotel)
-    // }
+    const handleSelectValue = (selectedHospital) => {
+        setSelectedHospital(selectedHospital);
+    }
+
+    const HandleHoverButtonClick = () => {
+        setAllPagesVisibility(!allPagesVisibility);
+    }
 
 
-    // let [allPagesVisibility, setAllPagesVisibility] = useState(false);
+    let [allPagesVisibility, setAllPagesVisibility] = useState(false);
+    let [selectedHospital, setSelectedHospital] = useState('');
+    let [mydata, setData] = useState(document);
 
-    // const HandleHoverButtonClick = () => {
-    //     setAllPagesVisibility(!allPagesVisibility);
-    // }
+    const myRef = React.createRef();
 
-    // const myRef = React.createRef();
-
-    // useEffect(
-    //     () => {
-    //         if (allPagesVisibility) myRef.current.scrollIntoView({ behavior: 'smooth' });
-    //         if (document.length !== 0) {
-    //             setData(document);
-    //         };
-    //     }, [allPagesVisibility, document]
-    // );
+    useEffect(
+        () => {
+            if (allPagesVisibility) {
+                myRef.current.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+            }
+            if (document.length !== 0) {
+                setData(document);
+            };
+        }, [allPagesVisibility, document]
+    );
 
     return (
         <>
-            <ScrollToTop></ScrollToTop>
-
-
-
-            <div className='ourHotels'>
-                <div className="container pt-5 align-middle">
-                    <div className="col-12 mt-5" >
-                        <div className='text-center'>
-                            <h3 className='mb-5 Myheading'>
-                                Hotels
-                            </h3>
-                            {                            
-                                <h3>
-                                    <Typewriter
-                                        options={{
-                                            strings: ['Coming Soon ...'],
-                                            autoStart: true,
-                                            loop: true,
-                                            delay: 110
-                                        }}
-                                    />
-                                </h3>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            {/* <div className="ourHotels">
+            {/* <ScrollToTop></ScrollToTop> */}
+            <div className="OurHotels">
+                {
+                    mydata.length !== 0 ? <div className='hotel_txt'>
+                        Hotels Nearby Hospital
+                    </div> : <></>
+                }
                 {
 
-                    !selectedHotel?.id ?
+                    !selectedHospital?.id ?
                         <>
                             <div className="container pt-5">
-                                <div className="col-12 mt-5" >
-                                    <div>
+                                <div className="col-12 pt-5" >
+                                    <div className='pt-5'>
                                         <h3>Our Hotels</h3>
-                                        <h4>Find out the most comfortable and cost-effective hotel options.
-                                        </h4>
-
-
+                                        <h4>Find out the most comfortable and cost-effective hotel options.</h4>
                                     </div>
                                 </div>
+
                             </div>
 
-                        </>
+                        </> : <div className='map_container'>
 
-                        : <div className='map_container'>
-                            <div className="container pt-5">
-                                <div className="col-12 mt-5" >
-                                    <div >
-                                        <h3 className='none'>Our Hotels</h3>
-                                        <h4 className='none'>Find out the most comfortable and cost-effective hotel options.
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div className="mapContainer iFrameContainer mapContainerLock">
-                                <div style={{ width: '100vw', height: '100%' }}>
-                                    <iframe src={selectedHotel?.map} width="100%" height="100%" title='Hotel and Hotel Map'></iframe>
-
-
-
+                                <div style={{ width: '100vw', height: '100vh' }}>
+                                    <iframe src={selectedHospital?.map} width="100%" height="100%" title='Hotel and Hospital Map'></iframe>
                                 </div>
                             </div>
+
+                            <div className='bottom-map-img'>
+                            </div>
+
                         </div>
                 }
 
 
                 <div className="spin-wheel-corner">
-                    <div className="spin-wheel-corner">
 
-                        {
-                            mydata.length !== 0 ?
-                                <SpinnerCorner info={mydata}
-                                    handleClick={
-                                        () => {
-                                            HandleHoverButtonClick();
-                                        }
+                    {
+                        mydata.length !== 0 ?
+                            <SpinnerCorner info={mydata}
+                                handleClick={
+                                    () => {
+                                        HandleHoverButtonClick();
                                     }
+                                }
 
-                                    handleHover={
-                                        (data) => {
-                                            handleSelectValue(data);
-                                        }
+                                handleHover={
+                                    (data) => {
+                                        handleSelectValue(data);
                                     }
+                                }
 
-                                /> :
-                                <></>
-                        }
+                            /> :
+                            <></>
+                    }
 
-                    </div>
                 </div>
 
-            </div> */}
+            </div>
 
-            {/* {
-                allPagesVisibility ?
-                    <>
-                        <HotelMapGostDiv myRef={myRef}></HotelMapGostDiv>
-                        <HotelMap HotelData={selectedHotel}></HotelMap>
-                        <HotelSlider HotelData={selectedHotel}></HotelSlider>
-                        <HotelDepartments HotelData={selectedHotel} />
-                    </>
-                    : <>
-                        <Footer />
-                    </>
-            } */}
-
+            <div ref={myRef}>
+                {
+                    allPagesVisibility ? <NearestHotels data={selectedHospital} /> : <></>
+                }
+            </div>
         </>
     );
 };

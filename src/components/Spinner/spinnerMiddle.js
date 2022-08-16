@@ -21,26 +21,31 @@ class SpinnerMiddle extends React.Component {
                 }
             );
         }
-        if(this.menus.length < 8){
-            this.menus = this.makeRepeated(this.menus, parseInt(7/this.menus.length)+1);
-            this.main_data = this.makeRepeated(this.main_data, parseInt(7/this.main_data.length)+1);
+        if (this.menus.length < 8) {
+            this.menus = this.makeRepeated(this.menus, parseInt(7 / this.menus.length) + 1);
+            this.main_data = this.makeRepeated(this.main_data, parseInt(7 / this.main_data.length) + 1);
         }
-        console.log(this.main_data, this.menus.length);
     }
 
     makeRepeated = (arr, repeats) => {
-            return Array.from({ length: repeats }, () => arr).flat();
+        return Array.from({ length: repeats }, () => arr).flat();
     }
 
     isClicked = (event) => {
         let data = JSON.parse(event.getAttribute('data-objs'));
-        if(data !== '-'){
+        if (data !== '-') {
             let bg_color = window.getComputedStyle(event.parentNode).getPropertyValue('background-color');
             document.getElementById('middle_').style.backgroundColor = bg_color;
-            document.getElementById('menu_nav').classList.add('after_click');
             this.props.handleClick(data, bg_color);
         }
     }
+
+    positioning = () => {
+        let spinner = document.getElementById('menu_nav');
+        let del = parseInt(window.innerWidth) - parseInt(spinner.offsetWidth);
+        spinner.style.left = del / 2 + "px";
+    }
+
 
     componentDidMount() {
 
@@ -51,6 +56,10 @@ class SpinnerMiddle extends React.Component {
         var nextId = 7;
         var nextIndex = lastIndex;
         var rotate = 0;
+
+        // Positioning
+        this.positioning();
+        window.addEventListener("resize", this.positioning);
 
         for (let i = 0; i < 4; i++) {
             let a_element = document.getElementById(`a-${i}`);
@@ -191,7 +200,7 @@ class SpinnerMiddle extends React.Component {
 
 
         document.querySelectorAll('div.spinner-middle-cont ul.circle li label.circle').forEach((e) => {
-            e.addEventListener('mouseover', () => {
+            e.addEventListener('click', () => {
                 document.querySelectorAll('div.spinner-middle-cont ul.circle li label.circle').forEach(
                     (el) => {
                         el.classList.remove('active');

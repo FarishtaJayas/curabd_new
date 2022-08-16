@@ -4,7 +4,7 @@ import './OurHospital.css'
 import { useCollection } from '../../../Hooks/useCollection';
 import HospitalDepartments from '../HospitalDepartments/HospitalDepartments';
 // import HospitalMap from '../HospitalMap/HospitalMap';
-import Footer from '../../../Shared/Footer/Footer';
+// import Footer from '../../../Shared/Footer/Footer';
 import HospitalMapGostDiv from '../HospitalMap/HospitalMapGostDiv/HospitalMapGostDiv';
 import SpinnerCorner from '../../Spinner/spinnerCorner';
 import ScrollToTop from './../../ScrollToTop/ScrollToTop';
@@ -37,7 +37,7 @@ const OurHospitals = () => {
             if (document.length !== 0) {
                 setData(document);
             };
-        }, [allPagesVisibility, document]
+        }, [document, allPagesVisibility]
     );
 
     return (
@@ -45,12 +45,18 @@ const OurHospitals = () => {
             <ScrollToTop></ScrollToTop>
             <div className="ourHospitals">
                 {
+                    mydata.length !== 0 ? <div className='hospital_txt'>
+                        Nearby Hospitals
+                    </div> : <></>
+                }
+
+                {
 
                     !selectedHospital?.id ?
                         <>
                             <div className="container pt-5">
-                                <div className="col-12 mt-5" >
-                                    <div >
+                                <div className="col-12 pt-5" >
+                                    <div className='pt-5'>
                                         <h3>Our Hospitals</h3>
                                         <h4>Look out for the hospitals you sought for - spin and pin.</h4>
 
@@ -59,25 +65,17 @@ const OurHospitals = () => {
 
                             </div>
 
+
+
                         </> : <div className='map_container'>
 
-                            <div className="container pt-5">
-                                <div className="col-12 mt-5" >
-                                    <div >
-                                        <h3 className='none'>Our Hospitals</h3>
-                                        <h4 className='none'>Look out for the hospitals you sought for - spin and pin.</h4>
-
-                                    </div>
+                            <div className="mapContainer iFrameContainer mapContainerLock">
+                                <div style={{ width: '100vw', height: '100vh' }}>
+                                    <iframe src={selectedHospital?.map_hospital} width="100%" height="100%" title='Hotel and Hospital Map'></iframe>
                                 </div>
                             </div>
-                            <div className="mapContainer iFrameContainer mapContainerLock">
 
-                                <div style={{ width: '100vw', height: '100%' }}>
-
-
-                                    <iframe src={selectedHospital?.map} width="100%" height="100%" title='Hotel and Hospital Map'></iframe>
-
-                                </div>
+                            <div className='bottom-map-img'>
                             </div>
                         </div>
                 }
@@ -100,8 +98,7 @@ const OurHospitals = () => {
                                     }
                                 }
 
-                            /> :
-                            <></>
+                            /> : <></>
                     }
 
                 </div>
@@ -111,15 +108,13 @@ const OurHospitals = () => {
 
             {
                 allPagesVisibility ?
-                    <>
+                    <div ref={myRef}>
                         <HospitalMapGostDiv></HospitalMapGostDiv>
                         {/* <HospitalMap hospitalData={selectedHospital}></HospitalMap> */}
                         {/* <HospitalVideo hospitalData={selectedHospital} /> */}
-                        <HospitalDepartments myRef={myRef} hospitalData={selectedHospital} />
-                    </>
-                    : <>
-                        <Footer />
-                    </>
+                        <HospitalDepartments hospitalData={selectedHospital} />
+                    </div>
+                    : <> </>
 
             }
 

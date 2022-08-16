@@ -1,29 +1,49 @@
-._SelectHotelsOrHospital {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    background-position: top center, bottom center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain ;
-    background-image: url("./../../../assets/Images/LandingPage/bg1.png"), url("./../../../assets/Images/LandingPage/bg2.jpg");
-    background-color: #ffffff;
-
+.home-icon {
+    width: 6rem;
 }
 
-._SelectHotelsOrHospital .card {
-    max-width: 24.5rem;
+._SelectHotelsOrHospital {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./../../../assets/Images/LandingPage/background_img.svg");
+    background-color: #ffffff;
+}
+
+._SelectHotelsOrHospital .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.card {
+    max-width: 22.5rem;
     border: none;
     align-items: center;
     box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    min-width: 11rem;
+    /* transition: all 0.1s; */
 }
 
-._SelectHotelsOrHospital .card:hover {
-    border-radius: 30px;
-    -webkit-transform: scale(1.10);
-    transform: scale(1.10);
+.card-left {
+    border-radius: 0rem 0 0 1rem;
 }
+
+.card-right {
+    border-radius: 0 0 1rem 0;
+}
+
+/* .card-right:hover {
+    border-radius: 0 0 1.5rem 0;
+}
+
+.card-left:hover {
+    border-radius: 0 0 0 1.5rem;
+} */
+
 
 ._SelectHotelsOrHospital .card-footer {
     background: none;
@@ -117,10 +137,20 @@
     background-color: #432a01;
 }
 
-.HotelContainer{
+.HotelContainer {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: left top;
     background-image: url("./../../../assets/Images/LandingPage/bg-med.jpg");
     background-color: #432a01;
 }
+
+@media screen and (max-width: 768px) {
+    .card-left {
+        border-radius: 1rem;
+    }
+    
+    .card-right {
+        border-radius: 1rem;
+    }
+  }

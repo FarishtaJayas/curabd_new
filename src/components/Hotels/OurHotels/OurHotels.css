@@ -1,94 +1,57 @@
-#myDvi {
-    visibility: hidden;
-
-}
-
-.Myheading{
-    font-size: 5.8rem !important;
-}
-
-.ourHotels {
+.OurHotels {
+	background: #ffffff;
+	color: #3d1a6f;
 	width: 100vw;
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
 }
 
-.map {
-    border: 1px solid red;
-    height: 400px;
-    width: 400px;
-    position: relative;
-    border-radius: 520px 0 0 0;
-    overflow: hidden;
-    right: 350px;
-    top: 195px;
-    position: absolute;
-    align-items: center;
-    justify-content: flex-end;
-
+.OurHotels svg {
+	color: white;
 }
 
+
+.OurHotels h3 {
+	font-weight: 700;
+	font-size: 3rem;
+}
+
+.OurHotels h4 {
+	font-weight: 400;
+	font-size: 1.875rem;
+}
+
+.bottom-map-img {
+	background-position: center top;
+	background-size: cover;
+	background-image: url('./../../../assets/Images/MapBackground.png');
+	height: 5.3rem;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+}
 
 .map_container {
-    position: relative;
+	height: 100vh;
 }
 
-
-.none {
-    opacity: 0;
+.hotel_txt {
+	position: absolute;
+	bottom: 0;
+	width: 10rem;
+	z-index: 10;
+	margin: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-bottom: 3.8rem;
+	font-weight: bold;
 }
 
-
-.ourHotels {
-    background: #ffffff;
-    color: #3d1a6f;
-
-
-}
-
-.ourHotels h3 {
-    font-weight: 700;
-    font-size: 3rem;
-}
-
-.ourHotels h4 {
-
-    font-weight: 400;
-    font-size: 1.875rem;
-}
-
-.ourHotels {
-
-    overflow: hidden;
-
-}
-
-.hotelsDetails .card p {
-    text-align: justify;
-}
-
-.hotelsDetails .card button {
-    background-color: #78D2CF;
-    padding: 15px 60px;
-    border-radius: 20px;
-}
-
-.hotelsDetails .card {
-
-    border-radius: 20px;
-}
-
-.ourHotels .container.pt-5 {
-    padding-top: 8rem !important;
-}
-
-.ourHospitals .container.pt-5 {
-    padding-top: 8rem !important;
-}
-
-@media (max-width: 701px) {
-    .ourHotels {
-        height: 100vh;
-    }
+@media screen and (max-width: 484px) {
+	.hotel_txt {
+		margin-bottom: 1rem;
+	}
 }

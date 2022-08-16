@@ -19,7 +19,7 @@
 
 .map_container .iFrameContainer {
 	position: absolute;
-	top: 0;
+	top: -5rem;
 	left: 0;
 	height: 100vh;
 }
@@ -126,5 +126,25 @@
 
 	.map_container .iFrameContainer {
 		height: 100vh;
+	}
+}
+
+.hospital_txt {
+	position: absolute;
+	bottom: 0;
+	width: 10rem;
+	z-index: 10;
+	margin: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-bottom: 3.8rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 484px) {
+	.hospital_txt {
+		margin-bottom: 1rem;
 	}
 }

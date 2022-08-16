@@ -2,6 +2,32 @@
     background: transparent;
 }
 
+.cardsCont {
+    margin: auto;
+    display: flex;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-bottom: 2rem;
+    z-index: 100;
+}
+
+.cardsCont::-webkit-scrollbar-track {
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.192);
+  }
+  
+  .cardsCont::-webkit-scrollbar {
+    height: 0.25rem;
+  }
+  
+  .cardsCont::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1b1b1ba2;
+    border: none;
+  }
+
 .doctors h3 {
     font-weight: 700;
     font-size: 3rem;
@@ -50,18 +76,24 @@
 .doctors .card-body {
     background: #ffff;
     border-radius: 0 0 20px 20px;
+    width: 100%;
 }
 
 .doctorHover:hover {
     border-radius: 30px;
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: all .1s;
 }
 
 .doctorHover img {
-    height: 200px;
+    width: auto !important;
+    height: auto;
+    border-radius: 1rem 1rem 0 0 !important;
 }
 
 .card-cont {
     max-width: 14rem;
+    min-width: 12rem;
+    margin: .5rem;
 }
